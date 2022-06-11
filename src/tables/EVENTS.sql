@@ -2,7 +2,7 @@
 
 -- DROP TABLE public.events;
 
-CREATE TABLE public.events
+CREATE TABLE IF NOT EXISTS public.events
 (
     event_id integer NOT NULL,
     event_date date,
