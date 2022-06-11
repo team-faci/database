@@ -2,7 +2,7 @@
 
 -- DROP TABLE public.users;
 
-CREATE TABLE public.users
+CREATE TABLE IF NOT EXISTS public.users
 (
     email character varying COLLATE pg_catalog."default" NOT NULL,
     first_name character varying COLLATE pg_catalog."default" NOT NULL,
