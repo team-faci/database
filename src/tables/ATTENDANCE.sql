@@ -2,7 +2,7 @@
 
 -- DROP TABLE public.attendance;
 
-CREATE TABLE public.attendance
+CREATE TABLE IF NOT EXISTS public.attendance
 (
     contact_id integer NOT NULL,
     event_id integer NOT NULL,
