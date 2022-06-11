@@ -2,7 +2,7 @@
 
 -- DROP TABLE public.contacts;
 
-CREATE TABLE public.contacts
+CREATE TABLE IF NOT EXISTS public.contacts
 (
     contact_id integer NOT NULL,
     user_id integer NOT NULL,
