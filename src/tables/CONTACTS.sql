@@ -13,7 +13,12 @@ CREATE TABLE IF NOT EXISTS public.contacts
     linkedin character varying COLLATE pg_catalog."default",
     title character varying COLLATE pg_catalog."default",
     notes character varying COLLATE pg_catalog."default",
-    CONSTRAINT contacts_pkey PRIMARY KEY (contact_id)
+    CONSTRAINT contacts_pkey PRIMARY KEY (contact_id),
+    CONSTRAINT contacts_fkey FOREIGN KEY (user_id)
+        REFERENCES public.users (user_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
 )
 
 TABLESPACE pg_default;
